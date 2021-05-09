@@ -4,7 +4,7 @@ import threading
 nickname = input("Escolha um nome de usuário: ")
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 55555))
+client.connect(('127.0.0.1', 42))
 
 def receive():
     while True:
@@ -21,7 +21,24 @@ def receive():
 
 def write():
     while True:
-        message = f'{nickname}: {input("")}'
+        a=input("")
+        if a == ":feliz:":
+            a = ":)"
+        elif a == ":triste:":
+            a = "):"
+        elif a == ":tedio:":
+            a = ":|"
+        elif a == ":raiva:":
+            a = ">:O"
+        elif a == ":surpresa:":
+            a = ":O"
+        elif a == ":rawr:":
+            a = "*-*"
+        elif a == ":lol:":
+            a = ":P"
+        else:
+            pass
+        message = f'{nickname}: {a}'
         client.send(message.encode('ascii'))
 
 receive_thread = threading.Thread(target=receive)
