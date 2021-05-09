@@ -24,7 +24,7 @@ def handle(client):
             clients.remove(client)
             client.close()
             nickname = nicknames[index]
-            broadcast(f'{nickname} left the chat'.encode('ascii'))
+            broadcast(f'{nickname} saiu do chat'.encode('ascii'))
             nicknames.remove(nickname)
             break
 
@@ -38,16 +38,14 @@ def receive():
         nicknames.append(nickname)
         clients.append(client)
 
-
-
         print(f'O nome de usuário do cliente é {nickname}!')
-        broadcast(f'{nickname} Entrou no grupo!'.encode('ascii'))
+        broadcast(f'{nickname} Entrou no grupo! Seja bem vindo ao software de conversas da APS!'.encode('ascii'))
         client.send('connectado ao servidor!'.encode('ascii'))
 
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
 
-print("O servidor esta na escuta...")
+print("O servidor esta escutando...")
 receive()
 
 
