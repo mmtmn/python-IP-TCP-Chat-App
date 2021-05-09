@@ -7,8 +7,8 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((host, port))
 server.listen()
 
-clients = []
 usernames = []
+clients = []
 
 def broadcast(message):
     for client in clients:
@@ -48,7 +48,3 @@ def receive():
 print("O servidor esta escutando...\n")
 print("[Para fechar o servidor, por favor feche o terminal]\n")
 receive()
-
-
-
-
