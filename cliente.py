@@ -32,7 +32,7 @@ print("\n Seja bem vindo ou bem vinda ao software de conversas da APS 2021!")
 input("\n\n Aperte qualquer coisa para continuar...")
 os.system('cls || clear')
 
-sair = print("[PARA SAIR, APERTE CONTROL E C AO MESMO TEMPO]")
+sair = print("[PARA SAIR, APERTE CONTROL E C AO MESMO TEMPO]\n[PARA ENVIAR MENSAGEM, ESCREVA E APERTE ENTER]")
 usuário = input("\nEscolha um nome de usuário: ")
 
 cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
