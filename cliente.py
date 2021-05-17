@@ -1,6 +1,6 @@
 """
 Para rodar o projeto, rode em um terminal:
-python server.py
+python servidor.py
 
 Em seguida, rode em dois terminais:
 python cliente.py

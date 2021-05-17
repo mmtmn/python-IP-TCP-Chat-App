@@ -3,7 +3,7 @@ Para rodar o projeto, rode em um terminal:
 python servidor.py
 
 Em seguida, rode em dois terminais:
-python client.py
+python cliente.py
 
 Por fim, teste a funcionalidade dos dois clientes
 com o terminal do servidor avisando o que esta acontecendo
